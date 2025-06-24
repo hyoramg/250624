@@ -57,4 +57,12 @@ if selected_mbti:
 
     if data:
         st.subheader(f"🔍 {selected_mbti} - {data['설명']}")
-        st.markdown("**추천 직업:**"
+        st.markdown("**추천 직업:**")
+
+        for job_name, job_desc in data["직업"]:
+            st.write(f"🌟 **{job_name}** — {job_desc}")
+
+        st.success("이 MBTI에 딱 맞는 직업들이에요! 🎉")
+        st.balloons()  # 풍선 효과
+    else:
+        st.warning("아직 이 MBTI 유형에 대한 정보는 준비 중이에요 😅")
